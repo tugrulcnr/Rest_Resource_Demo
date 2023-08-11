@@ -1,4 +1,4 @@
-class ResourceModel {
+class ProviderModel {
   int? page;
   int? perPage;
   int? total;
@@ -6,7 +6,7 @@ class ResourceModel {
   List<Data>? data;
   Support? support;
 
-  ResourceModel(
+  ProviderModel(
       {this.page,
       this.perPage,
       this.total,
@@ -14,7 +14,7 @@ class ResourceModel {
       this.data,
       this.support});
 
-  ResourceModel.fromJson(Map<String, dynamic> json) {
+  ProviderModel.fromJson(Map<String, dynamic> json) {
     page = json['page'];
     perPage = json['per_page'];
     total = json['total'];

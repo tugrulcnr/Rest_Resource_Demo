@@ -1,16 +1,16 @@
 import 'package:dio/dio.dart';
-import 'package:rest_resource/Request/model/resource_model.dart';
+import 'package:rest_resource/Provider_Request/model/provider_model.dart';
 
-class ResourceService {
+class ProviderService {
   final _service = Dio();
   
 
-  Future<ResourceModel?> getData() async {
+  Future<ProviderModel?> getData() async {
     final response = await _service.get("https://reqres.in/api/unknown");
     if(response.statusCode == 200){
       final data = response.data;
       if(data is Map<String, dynamic>){
-        return ResourceModel.fromJson(data);
+        return ProviderModel.fromJson(data);
       }
     }
     return null;
